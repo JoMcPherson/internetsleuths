@@ -3,3 +3,18 @@
   justify-content: center;
   align-items: center;
 }
+
+.footer-links {
+  font-size: 10px !important;
+}
+
+@media (orientation: landscape) {
+  body {
+    color: black;
+  }
+}
+@media (orientation: portrait) {
+  body {
+    color: darkslategray;
+  }
+}
