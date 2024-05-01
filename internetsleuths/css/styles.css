@@ -10,6 +10,7 @@
   max-height: 100%;
 }
 
-#footer-text {
+.text-xs{
   font-size: 1px !important;
+  color: pink;
 }
