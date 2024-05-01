@@ -9,3 +9,7 @@
   max-width: 100%;
   max-height: 100%;
 }
+
+#footer-text {
+  font-size: 1px !important;
+}
