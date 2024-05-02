@@ -120,6 +120,7 @@
               src="../images/logoonly.png"
               class="rounded-full"
               style="height: 5rem"
+              alt="cartoon detective logo"
             />
           </a>
           <button class="navbar-close">
@@ -199,6 +200,7 @@
             src="../images/logoonly.png"
             class="rounded-full"
             style="height: 10rem"
+            alt="cartoon detective logo"
           />
           <h2
             class="mt-10 text-center text-2xl font-bold leading-9 tracking-tight text-gray-900"
@@ -289,15 +291,15 @@
               How Did You Hear About Us?
             </p>
             <input type="radio" id="google" name="feedback" value="google" />
-            <label class="text-sm font-medium text-gray-900" for="html"
+            <label class="text-sm font-medium text-gray-900" for="google"
               >I'm good at searching Google too</label
             ><br />
             <input type="radio" id="friend" name="feedback" value="friend" />
-            <label class="text-sm font-medium text-gray-900" for="css"
+            <label class="text-sm font-medium text-gray-900" for="friend"
               >A fellow creep</label
             ><br />
             <input type="radio" id="spam" name="feedback" value="spam" />
-            <label class="text-sm font-medium text-gray-900" for="javascript"
+            <label class="text-sm font-medium text-gray-900" for="spam"
               >You spammed my algorithm</label
             >
 
@@ -313,48 +315,48 @@
         </div>
       </div>
     </main>
+
+    <script>
+      // Burger menus
+      document.addEventListener("DOMContentLoaded", function () {
+        // open
+        const burger = document.querySelectorAll(".navbar-burger");
+        const menu = document.querySelectorAll(".navbar-menu");
+
+        if (burger.length && menu.length) {
+          for (var i = 0; i < burger.length; i++) {
+            burger[i].addEventListener("click", function () {
+              for (var j = 0; j < menu.length; j++) {
+                menu[j].classList.toggle("hidden");
+              }
+            });
+          }
+        }
+
+        // close
+        const close = document.querySelectorAll(".navbar-close");
+        const backdrop = document.querySelectorAll(".navbar-backdrop");
+
+        if (close.length) {
+          for (var i = 0; i < close.length; i++) {
+            close[i].addEventListener("click", function () {
+              for (var j = 0; j < menu.length; j++) {
+                menu[j].classList.toggle("hidden");
+              }
+            });
+          }
+        }
+
+        if (backdrop.length) {
+          for (var i = 0; i < backdrop.length; i++) {
+            backdrop[i].addEventListener("click", function () {
+              for (var j = 0; j < menu.length; j++) {
+                menu[j].classList.toggle("hidden");
+              }
+            });
+          }
+        }
+      });
+    </script>
   </body>
-
-  <script>
-    // Burger menus
-    document.addEventListener("DOMContentLoaded", function () {
-      // open
-      const burger = document.querySelectorAll(".navbar-burger");
-      const menu = document.querySelectorAll(".navbar-menu");
-
-      if (burger.length && menu.length) {
-        for (var i = 0; i < burger.length; i++) {
-          burger[i].addEventListener("click", function () {
-            for (var j = 0; j < menu.length; j++) {
-              menu[j].classList.toggle("hidden");
-            }
-          });
-        }
-      }
-
-      // close
-      const close = document.querySelectorAll(".navbar-close");
-      const backdrop = document.querySelectorAll(".navbar-backdrop");
-
-      if (close.length) {
-        for (var i = 0; i < close.length; i++) {
-          close[i].addEventListener("click", function () {
-            for (var j = 0; j < menu.length; j++) {
-              menu[j].classList.toggle("hidden");
-            }
-          });
-        }
-      }
-
-      if (backdrop.length) {
-        for (var i = 0; i < backdrop.length; i++) {
-          backdrop[i].addEventListener("click", function () {
-            for (var j = 0; j < menu.length; j++) {
-              menu[j].classList.toggle("hidden");
-            }
-          });
-        }
-      }
-    });
-  </script>
 </html>
